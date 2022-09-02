@@ -2,15 +2,17 @@ let x = 100;
 let y = 100;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 500);
+  stroke("#000");
 }
 
 function draw() {
-  background(220);
-  fill("#333");
-  circle(x, y, 40);
-  square(200, 200, 100);
-  stroke("#f00");
+  if (mouseIsPressed) {
+    fill(0);
+  } else {
+    fill(255);
+  }
+  ellipse(x, y, 70, 70);
 
   if (keyIsDown(LEFT_ARROW)) {
     x = x - 10;
